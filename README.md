@@ -2,13 +2,13 @@
 
 # SillyTavern on Railway
 
-This repo is the source of the **SillyTavern** Railway template. It deploys [SillyTavern](https://github.com/SillyTavern/SillyTavern) **1.19.0**, the official image `ghcr.io/sillytavern/sillytavern:1.19.0`, pinned by digest in the `Dockerfile`.
+This repo is the source of the **SillyTavern** Railway template. It deploys [SillyTavern](https://github.com/SillyTavern/SillyTavern) **1.19.1**, the official image `ghcr.io/sillytavern/sillytavern:1.19.1`, pinned by digest in the `Dockerfile`.
 
 ## What the template deploys
 
 One service, built from this repo:
 
-- SillyTavern 1.19.0, password-protected with HTTP basic auth (always on: the container refuses to start without a password).
+- SillyTavern 1.19.1, password-protected with HTTP basic auth (always on: the container refuses to start without a password).
 - A Railway volume at `/data` holding SillyTavern's `config`, `data` (characters, chats, settings, user files), `plugins`, third-party `extensions` and `backups`. Everything survives redeploys and updates.
 - A small built-in proxy listens on `PORT` (8080) and forwards to SillyTavern on `127.0.0.1:8000`. It also answers `/healthz` without a login, which Railway uses as the health check.
 
